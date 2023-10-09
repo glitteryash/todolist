@@ -3,3 +3,54 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background: linear-gradient(90deg, #55e1ff 0%, #ffeb3bb8 56%, #dab4ff 100%);
+  header {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-size: 4rem;
+      color: white;
+      border-style: solid;
+      border-width: 0.5rem;
+      padding: 1rem;
+    }
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input,
+    button {
+      border: none;
+      padding: 0.25rem;
+      font-size: 1.75rem;
+      margin: 0.2rem;
+    }
+    input[type="number"] {
+      width: 100px;
+      text-align: center;
+    }
+    button {
+      cursor: pointer;
+      background-color: #dab4ff;
+      color: white;
+      width: 80px;
+    }
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

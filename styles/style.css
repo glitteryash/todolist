@@ -2,4 +2,55 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(90deg, #55e1ff 0%, rgba(255, 235, 59, 0.7215686275) 56%, #dab4ff 100%);
+}
+body header {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body header h1 {
+  font-size: 4rem;
+  color: white;
+  border-style: solid;
+  border-width: 0.5rem;
+  padding: 1rem;
+}
+body form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body form input,
+body form button {
+  border: none;
+  padding: 0.25rem;
+  font-size: 1.75rem;
+  margin: 0.2rem;
+}
+body form input[type=number] {
+  width: 100px;
+  text-align: center;
+}
+body form button {
+  cursor: pointer;
+  background-color: #dab4ff;
+  color: white;
+  width: 80px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }/*# sourceMappingURL=style.css.map */
