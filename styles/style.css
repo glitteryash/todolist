@@ -42,6 +42,23 @@ body form button {
   color: white;
   width: 80px;
 }
+body section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body section div.todo {
+  width: 30vw;
+  margin: 0.2rem 0rem;
+  display: flex;
+  justify-content: center;
+}
+body section div.todo p {
+  background-color: white;
+  color: black;
+  font-size: 2rem;
+  padding: 0.25rem 0.5rem;
+}
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
