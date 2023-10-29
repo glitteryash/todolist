@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+i {
+  pointer-events: none;
+}
+
 body {
   background: linear-gradient(90deg, #55e1ff 0%, rgba(255, 235, 59, 0.7215686275) 56%, #dab4ff 100%);
 }
@@ -52,12 +56,39 @@ body section div.todo {
   margin: 0.2rem 0rem;
   display: flex;
   justify-content: center;
+  transition: all 0.3s ease;
 }
 body section div.todo p {
   background-color: white;
   color: black;
-  font-size: 2rem;
+  font-size: 1.75rem;
   padding: 0.25rem 0.5rem;
+}
+body section div.todo p.todo-text {
+  width: 50%;
+}
+body section div.todo p.todo-time {
+  width: 20%;
+  text-align: center;
+}
+body section div.todo button {
+  padding: 0.25rem 0.5rem;
+  font-size: 1.75rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+body section div.todo button.complete {
+  background-color: greenyellow;
+}
+body section div.todo button.trash {
+  background-color: coral;
+}
+
+.done {
+  opacity: 0.5;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.2rem;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -70,4 +101,22 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+@-webkit-keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=style.css.map */

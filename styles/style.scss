@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+i {
+  pointer-events: none;
+}
 
 body {
   background: linear-gradient(90deg, #55e1ff 0%, #ffeb3bb8 56%, #dab4ff 100%);
@@ -50,14 +53,41 @@ body {
       margin: 0.2rem 0rem;
       display: flex;
       justify-content: center;
+      transition: all 0.3s ease;
       p {
         background-color: white;
         color: black;
-        font-size: 2rem;
+        font-size: 1.75rem;
         padding: 0.25rem 0.5rem;
+      }
+      p.todo-text {
+        width: 50%;
+      }
+      p.todo-time {
+        width: 20%;
+        text-align: center;
+      }
+      button {
+        padding: 0.25rem 0.5rem;
+        font-size: 1.75rem;
+        border: none;
+        cursor: pointer;
+        color: white;
+      }
+      button.complete {
+        background-color: greenyellow;
+      }
+      button.trash {
+        background-color: coral;
       }
     }
   }
+}
+
+.done {
+  opacity: 0.5;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.2rem;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -70,4 +100,13 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
