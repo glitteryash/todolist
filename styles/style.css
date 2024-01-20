@@ -9,7 +9,11 @@ i {
 }
 
 body {
-  background: linear-gradient(90deg, #55e1ff 0%, rgba(255, 235, 59, 0.7215686275) 56%, #dab4ff 100%);
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background: linear-gradient(to left top, #ffdef1, #f2d1ee, #e1c5ec, #ccbbeb, #b2b2ea, #9eb6f1, #86bbf6, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  background-attachment: fixed;
 }
 body header {
   height: 20vh;
@@ -35,6 +39,7 @@ body form button {
   padding: 0.25rem;
   font-size: 1.75rem;
   margin: 0.2rem;
+  box-shadow: rgba(117, 117, 117, 0.2) 0px 7px 29px 0px;
 }
 body form input[type=number] {
   width: 100px;
@@ -42,9 +47,27 @@ body form input[type=number] {
 }
 body form button {
   cursor: pointer;
-  background-color: #dab4ff;
+  background-color: #ffdef1;
   color: white;
   width: 80px;
+  box-shadow: rgba(117, 117, 117, 0.2) 0px 7px 29px 0px;
+  border-radius: 20px;
+}
+body div.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0rem;
+}
+body div.btn button {
+  cursor: pointer;
+  background-color: #ffdef1;
+  border-radius: 20px;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.75rem;
+  margin: 0rem 0.2rem;
 }
 body section {
   display: flex;
@@ -52,7 +75,7 @@ body section {
   align-items: center;
 }
 body section div.todo {
-  width: 30vw;
+  width: 25vw;
   margin: 0.2rem 0rem;
   display: flex;
   justify-content: center;
@@ -63,12 +86,14 @@ body section div.todo p {
   color: black;
   font-size: 1.75rem;
   padding: 0.25rem 0.5rem;
+  margin: 0rem 0.2rem;
+  border-radius: 20px;
 }
 body section div.todo p.todo-text {
-  width: 50%;
+  width: 70%;
 }
 body section div.todo p.todo-time {
-  width: 20%;
+  width: 30%;
   text-align: center;
 }
 body section div.todo button {
@@ -80,9 +105,17 @@ body section div.todo button {
 }
 body section div.todo button.complete {
   background-color: greenyellow;
+  border-radius: 50%;
 }
 body section div.todo button.trash {
   background-color: coral;
+  border-radius: 50%;
+}
+body marquee {
+  color: rgba(0, 0, 0, 0);
+  font-size: 10rem;
+  -webkit-text-stroke: 1px #fff;
+  text-shadow: 5px 5px 0 #ffdef1;
 }
 
 .done {
@@ -118,5 +151,132 @@ input[type=number] {
   }
   to {
     transform: scale(1);
+  }
+}
+@-webkit-keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@media screen and (max-width: 390px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background: fixed linear-gradient(to left top, #ffdef1, #f2d1ee, #e1c5ec, #ccbbeb, #b2b2ea, #9eb6f1, #86bbf6, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  }
+  body header {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body header h1 {
+    font-size: 3rem;
+    color: white;
+    border-style: solid;
+    border-width: 0.5rem;
+    padding: 1rem;
+  }
+  body form {
+    width: 90vw;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  body form input,
+body form button {
+    border: none;
+    padding: 0.25rem;
+    font-size: 1rem;
+    margin: 0.2rem;
+    box-shadow: rgba(117, 117, 117, 0.2) 0px 7px 29px 0px;
+  }
+  body form input[type=number] {
+    min-width: 50px;
+    text-align: center;
+  }
+  body form button {
+    cursor: pointer;
+    background-color: #ffdef1;
+    color: white;
+    width: 50px;
+    box-shadow: rgba(117, 117, 117, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+  }
+  body div.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0rem;
+  }
+  body div.btn button {
+    cursor: pointer;
+    background-color: #ffdef1;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin: 0rem 0.2rem;
+  }
+  body section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body section div.todo {
+    width: 80vw;
+    margin: 0.2rem 0rem;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  body section div.todo p {
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
+    margin: 0rem 0.2rem;
+    border-radius: 20px;
+  }
+  body section div.todo p.todo-text {
+    width: 70%;
+  }
+  body section div.todo p.todo-time {
+    width: 30%;
+    text-align: center;
+  }
+  body section div.todo button {
+    padding: 0.25rem 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
+  body section div.todo button.complete {
+    background-color: greenyellow;
+    border-radius: 50%;
+  }
+  body section div.todo button.trash {
+    background-color: coral;
+    border-radius: 50%;
+  }
+  body marquee {
+    color: rgba(0, 0, 0, 0);
+    font-size: 10rem;
+    -webkit-text-stroke: 1px #fff;
+    text-shadow: 5px 5px 0 #ffdef1;
   }
 }/*# sourceMappingURL=style.css.map */
